@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeClass;
 
 public class BasePage {
     protected WebDriver driver;
-    private String baseUrl = " link-ul site-ului ";
+    private String baseUrl = "https://www.lambdatest.com/selenium-playground/";
     public BasePage() {
         // Default constructor
     }
@@ -20,9 +20,12 @@ public class BasePage {
         System.setProperty("web-driver.chrome.driver", "C:\\Users\\Alexandra\\ChromeDriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(baseUrl);
+        driver.manage().window().maximize();
     }
+    /*
     @AfterMethod //we use @AfterMethod to close the browser after each test case
     public void tearDown() {
         driver.quit();
     }
+     */
 }
