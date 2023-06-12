@@ -15,6 +15,7 @@ public class BasePage {
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
+
     @BeforeClass
     public void setUp() {
         System.setProperty("web-driver.chrome.driver", "C:\\Users\\Alexandra\\ChromeDriver\\chromedriver.exe");

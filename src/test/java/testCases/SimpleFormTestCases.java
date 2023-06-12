@@ -61,7 +61,7 @@ public class SimpleFormTestCases extends BasePage {
         Assert.assertTrue(driver.getPageSource().contains("/@#!"));
     }
     @Test
-    public void verifyTheSingleInputFieldWithCharactersNumbersAndSpecialCharacters() throws InterruptedException {
+    public void verifyTheSingleInputFieldWithCharactersAndNumbersAndSpecialCharacters() throws InterruptedException {
         // Go to Simple Form Demo from Input Forms
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[1]/a")).click();
         simpleFormPage.verifySingleInputField("@Hello there you 2!");
@@ -109,7 +109,7 @@ public class SimpleFormTestCases extends BasePage {
     }
 
     @Test
-    public void verifyTheTwoInputFieldWithCharactersInsteadOfNumbers() throws InterruptedException {
+    public void verifyTheTwoInputFieldWithTwoCharactersInsteadOfTwoNumbers() throws InterruptedException {
         // Go to Simple Form Demo from Input Forms
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[1]/a")).click();
         simpleFormPage.verifyEnterFirstValueField("B");
@@ -129,7 +129,7 @@ public class SimpleFormTestCases extends BasePage {
 
 
     @Test
-    public void verifyTheTwoInputFieldWithSpecialCharacters() throws InterruptedException {
+    public void verifyTheTwoInputFieldWithTwoSpecialCharactersInsteadOfTwoNumbers() throws InterruptedException {
         // Go to Simple Form Demo from the menu
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[1]/a")).click();
         simpleFormPage.verifyEnterFirstValueField("%");

@@ -26,6 +26,7 @@ public class CheckboxTestCases extends BasePage {
         checkboxPage.clickOnSingleCheckboxButton();
         Assert.assertTrue(driver.getPageSource().contains("Checked"));
     }
+
     //Disabled Checkbox Demo
     @Test
     public void verifyIfOption1CheckboxButtonIsEnabled() throws InterruptedException {
@@ -66,7 +67,7 @@ public class CheckboxTestCases extends BasePage {
         checkboxPage.verifyOption2MultipleCheckbox();
     }
     @Test
-    public void verifyIfOption13romMultipleCheckboxIsEnabled() throws InterruptedException {
+    public void verifyIfOption3FromMultipleCheckboxIsEnabled() throws InterruptedException {
         // Go to Checkbox Demo from the menu
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxPage.verifyOption3MultipleCheckbox();

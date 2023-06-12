@@ -9,11 +9,15 @@ public class SimpleFormPage extends BasePage {
         super(driver);
     }
 
-    //Locators and methods for elements in Simple Form Page
+    //Locators and methods for elements in Simple Form Demo Page
+
+    //Single Input Field
     By SingleInputField = By.id("user-message");
     public void verifySingleInputField(String input1) { driver.findElement(SingleInputField).sendKeys(input1); }
     By GetCheckedValueButton = By.id("showInput");
     public void clickOnGetCheckedValueButton() {driver.findElement(GetCheckedValueButton).click();}
+
+    //Two Input Fields
     By EnterFirstValueField = By.id("sum1");
     public void verifyEnterFirstValueField(String input2) {driver.findElement(EnterFirstValueField).sendKeys(input2);}
     By EnterSecondValueField = By.id("sum2");

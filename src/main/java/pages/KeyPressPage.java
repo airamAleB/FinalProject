@@ -10,7 +10,9 @@ public class KeyPressPage extends BasePage {
     }
 
     //Locators and methods for elements in Key Press Page
-    By KeyField = By.id("my_field");
-    public void verifyKeyField(){driver.findElement(KeyField).sendKeys(Keys.BACK_SPACE);}
+    By KeyField1 = By.id("my_field");
+    public void verifyKeyField1(){driver.findElement(KeyField1).sendKeys(Keys.BACK_SPACE);}
+    By KeyField2 = By.id("my_field");
+    public void verifyKeyField2(String char1){driver.findElement(KeyField2).sendKeys(char1);}
 
 }
