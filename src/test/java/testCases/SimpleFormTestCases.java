@@ -37,12 +37,20 @@ public class SimpleFormTestCases extends BasePage {
         Assert.assertTrue(driver.getPageSource().contains("South America is a continent"));
     }
     @Test
-    public void verifyTheSingleInputFieldWithNumbers() throws InterruptedException {
+    public void verifyTheSingleInputFieldWithIntNumbers() throws InterruptedException {
         // Go to Simple Form Demo from Input Forms
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[1]/a")).click();
         simpleFormPage.verifySingleInputField("1997");
         simpleFormPage.clickOnGetCheckedValueButton();
         Assert.assertTrue(driver.getPageSource().contains("1997"));
+    }
+    @Test
+    public void verifyTheSingleInputFieldWithDoubleNumbers() throws InterruptedException {
+        // Go to Simple Form Demo from Input Forms
+        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[1]/a")).click();
+        simpleFormPage.verifySingleInputField("19.97");
+        simpleFormPage.clickOnGetCheckedValueButton();
+        Assert.assertTrue(driver.getPageSource().contains("19.97"));
     }
     @Test
     public void verifyTheSingleInputFieldWithSpecialCharacters() throws InterruptedException {

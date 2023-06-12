@@ -22,10 +22,10 @@ public class BasePage {
         driver.get(baseUrl);
         driver.manage().window().maximize();
     }
-    /*
+
     @AfterMethod //we use @AfterMethod to close the browser after each test case
     public void tearDown() {
         driver.quit();
     }
-     */
+
 }
